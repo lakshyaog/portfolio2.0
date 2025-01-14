@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Chaudhary | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            color: #ffd700;
+            text-align: center;
+        }
+
+        p, li {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 50px 0;
+            border-bottom: 1px solid #444;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #home {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        #home h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        #home p {
+            font-size: 1.2em;
+        }
+
+        #about {
+            background-color: #1e1e1e;
+        }
+
+        #experience {
+            background-color: #1e1e1e;
+        }
+
+        .experience-item {
+            background: #2a2a2a;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        #projects {
+            background-color: #121212;
+        }
+
+        .project {
+            background: #1e1e1e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            background: #2a2a2a;
+        }
+
+        #skills {
+            background-color: #1e1e1e;
+        }
+
+        #skills ul li {
+            background: #2a2a2a;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        #skills ul li:hover {
+            transform: translateX(5px);
+        }
+
+        #contact {
+            background-color: #121212;
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background: #2a2a2a;
+            color: #fff;
+        }
+
+        button {
+            background: #ffd700;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background: #e0b400;
+            transform: scale(1.1);
+        }
+
+        #portfolio {
+            background-color: #2a2a2a;
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        #portfolio h2 {
+            color: #ffd700;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #quote {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #ffffff;
+            margin: 20px 0;
+        }
+
+        #quote::before {
+            content: '"';
+            font-size: 2em;
+        }
+
+        #quote::after {
+            content: '"';
+            font-size: 2em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            #home h1 {
+                font-size: 2.5em;
+            }
+
+            #home p {
+                font-size: 1em;
+            }
+
+            form {
+                padding: 15px;
+            }
+
+            button {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="home" class="section">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <h2>Lakshya Chaudhary</h2>
+            <p>Aspiring Software Engineer | AI/ML Enthusiast | BTech (AI/ML) at Galgotias University</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a first-year BTech student specializing in AI/ML at Galgotias University. My passion lies in solving real-world problems using AI and machine learning, and I enjoy building innovative projects. I am skilled in Python, Data Structures, and Algorithms, and I am currently learning web frameworks like Django and Flask to build robust applications. I also have experience in SolidWorks, designing mechanical prototypes for engineering projects.</p>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Technojam Coding Enthusiast Club</h3>
+                <p>Active member of the club, honing my coding skills and contributing to various programming events and challenges.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Developing Mindset Student at Prepinsta Prime</h3>
+                <p>Participating in the IIRS ML Learning Program, focusing on building a strong foundation in machine learning and its applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Engineering Quote</h2>
+            <p id="quote">"The engineer has been, and is, a maker of history." – James Kip Finch</p>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Madesteps</h3>
+                <p>An online maid booking app with a user-friendly interface, featuring dedicated sections for users and maids. The app includes home, service, and profile screens, designed to make maid bookings simple and efficient.</p>
+            </div>
+            <div class="project">
+                <h3>Jarvis</h3>
+                <p>An AI-based assistant capable of performing tasks, providing information, and interacting intelligently. This project showcases my passion for AI and its practical applications in everyday life.</p>
+            </div>
+            <div class="project">
+                <h3>Car Jack Prototype</h3>
+                <p>A mechanical prototype designed using SolidWorks for my Engineering Designing Prototyping subject. This project involved creating a functional design to lift vehicles safely and efficiently, emphasizing precision and engineering design.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python (Advanced) - Data Structures and Algorithms</li>
+                <li>AI/ML - Deep Learning, Neural Networks, TensorFlow</li>
+                <li>Web Development - Django, Flask (Learning and Exploring)</li>
+                <li>SolidWorks - Engineering Design and Prototyping</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', event => {
+            const name = document.querySelector('#name').value.trim();
+            const email = document.querySelector('#email').value.trim();
+            const message = document.querySelector('#message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill out all fields.');
+                event.preventDefault();
+            } else if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                event.preventDefault();
+            }
+        });
+
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        const sections = document.querySelectorAll('.section');
+        const options = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+
